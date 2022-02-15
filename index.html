@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<p>Số nguyên tố là số tự nhiên lớn hơn 1 không phải là tích của hai số tự nhiên nhỏ hơn. Nói cách khác, số nguyên tố là những số chỉ có đúng hai ước số là 1 và chính nó.
+<p>Số nguyên tố là số tự nhiên lớn hơn 1 không phải là tích của hai số tự nhiên nhỏ hơn. Nói cách khác, số nguyên tố là
+    những số chỉ có đúng hai ước số là 1 và chính nó.
     <br>Các số tự nhiên lớn hơn 1 không phải là số nguyên tố được gọi là hợp số.</p>
 <h2 id="s1"></h2>
 </body>
@@ -13,27 +14,30 @@
     let numbers = parseInt(prompt("Nhập số lượng số nguyên tố cần tìm :"));
     let count = 0;
     for (let N = 2; count < numbers; N++)
-    //for lớn, N số cần kiểm tra
+        //for lớn, N số cần kiểm tra
     {
         let check = true;
         for (let i = 2; i < N; i++)
-        //for nhỏ chạy xong quay lại for lớn, i là biến kiểm tra N
+            //for nhỏ chạy xong quay lại for lớn, i là biến kiểm tra N
         {
 
 
             if (N % i == 0) {
-                console.log('vào if với i==',i)
-                console.log('giá trị N',N)
+                console.log('vào if với i==', i)
+                console.log('giá trị N', N)
                 check = false;
                 break;
             }
         }
+
         if (check == true) {
             count++;
             document.write(N + " ")
         }
+    //    if2 không nằm trong for nhỏ nhưng theo chiều thực thi từ trên xuống nó phải đợi lặp for nhỏ hoàn tất thì nó mới thực hiện.
+    //    lúc này biến đếm số lượng mới tăng khi đã check xong.
     }
-    p3=document.getElementById('s1').innerHTML='Dãy số nguyên tố là: '+N
+    p3 = document.getElementById('s1').innerHTML = 'Dãy số nguyên tố là: ' + N
 
 </script>
 </html>
